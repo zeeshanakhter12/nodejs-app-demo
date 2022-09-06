@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-pod
+  namespace: default
+  labels:
+    component: web
+spec:
+  containers:
+    - name: client
+      image: ubosquet/client-api
+      ports:
+        - containerPort: 3000
+
