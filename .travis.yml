@@ -12,7 +12,6 @@ after_success:
   - docker build -t ubosquet/nginx-api:1.0.1  ./nginx
   - docker build -t ubosquet/server-api:1.0.1  ./server
   - docker build -t ubosquet/worker-api:1.0.1  ./worker
-  
   #L Login to Docker HUB
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-set-stdin
   - docker push ubosquet/client-api:1.0.1
