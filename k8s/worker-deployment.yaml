@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: worker-deployment
+  namespace: team-burnham
 spec:
   replicas: 1
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: worker
-          image: stephengrider/multi-worker
+          image: ubosquet/worker:1.0
           env:
             - name: REDIS_HOST
               value: redis-cluster-ip-service

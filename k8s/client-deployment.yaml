@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: client-deployment
+  namespace: team-burnham
 spec:
   replicas: 3
   selector:
@@ -14,6 +15,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: stephengrider/multi-client
+          image: ubosquet/client:1.0
           ports:
             - containerPort: 3000
