@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 class Fib extends Component {
   state = {
@@ -56,17 +59,17 @@ class Fib extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Enter your index:</label>
+          <label>Enter your index:</label><br></br>
           <input
             value={this.state.index}
             onChange={(event) => this.setState({ index: event.target.value })}
           />
-          <button>Submit</button>
+          <button variant="outline-primary">Submit</button>
         </form>
-
+        <br></br>
         <h3>Indexes I have seen:</h3>
         {this.renderSeenIndexes()}
-
+        <br></br>
         <h3>Calculated Values:</h3>
         {this.renderValues()}
       </div>
