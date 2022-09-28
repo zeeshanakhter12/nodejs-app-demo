@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: ubosquet/server:1.0
+          image: 966339691353.dkr.ecr.us-west-2.amazonaws.com/nodejs-demo-server:latest
           ports:
             - containerPort: 5000
           env:

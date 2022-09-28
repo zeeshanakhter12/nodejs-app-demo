@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: ubosquet/client:3.0
+          image: 966339691353.dkr.ecr.us-west-2.amazonaws.com/nodejs-demo:latest
           ports:
             - containerPort: 3000
